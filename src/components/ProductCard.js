@@ -43,13 +43,13 @@ export default function ProductCard({ product, onAddToCart, onAddToWishlist }) {
         </div>
       </div>
       
-      <div className={`flex items-center ${isHovering ? 'absolute left-4' : ''}`}>
+      <div className={`flex flex-col items-start ${isHovering ? 'absolute left-4' : ''}`}>
         {/* Quantity and Price Display */}
-        <div className="text-zinc-500 text-xs mr-6">
+        <div className="text-zinc-500 text-xs mb-2">
           QUANTITY
           <div className="text-white font-semibold">{quantity}</div>
         </div>
-        <div className="text-zinc-500 text-xs mr-2">
+        <div className="text-zinc-500 text-xs">
           PRICE
           <div className="text-white font-semibold">${product.price}</div>
         </div>
