@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import ProductCard from './ProductCard';
+import { TbHexagonLetterQ } from "react-icons/tb";
 
 export default function ProductList({ products, onAddToCart, onAddToWishlist }) {
   const [searchQuery, setSearchQuery] = useState('');
@@ -30,21 +31,24 @@ export default function ProductList({ products, onAddToCart, onAddToWishlist }) 
   );
 
   return (
-    <div className="bg-zinc-950 text-white rounded-md h-full">
-      <div className="flex p-4 space-x-2 overflow-x-auto border-b border-zinc-800">
-        <button className="px-4 py-2 rounded-md bg-indigo-600 hover:bg-indigo-700 text-white whitespace-nowrap">
+    <div className="bg-zinc-950 text-gray-400 rounded-md h-full">
+      <div className="flex ptop-4 overflow-x-auto border-b border-zinc-800">
+        <button className="px-10 py-4 rounded-md bg-zinc-800 text-gray-400 hover:bg-indigo-800 hover:text-white whitespace-nowrap">
+          Trending
+        </button>
+        <button className="px-10 py-4 rounded-md bg-indigo-600  hover:bg-indigo-800 whitespace-nowrap">
           Top Deals
         </button>
-        <button className="px-4 py-2 rounded-md bg-zinc-800 hover:bg-zinc-700 text-white whitespace-nowrap">
+        <button className="px-10 py-4 rounded-md bg-zinc-800 text-gray-400 hover:bg-indigo-800 hover:text-white whitespace-nowrap">
           New Listings
         </button>
-        <button className="px-4 py-2 rounded-md bg-zinc-800 hover:bg-zinc-700 text-white whitespace-nowrap">
+        <button className="px-10 py-4 rounded-md bg-zinc-800 text-gray-400 hover:bg-indigo-800 hover:text-white  whitespace-nowrap">
           Price Lowered
         </button>
-        <button className="px-4 py-2 rounded-md bg-zinc-800 hover:bg-zinc-700 text-white whitespace-nowrap">
+        <button className="px-10 py-4 rounded-md bg-zinc-800 text-gray-400 hover:bg-indigo-800 hover:text-white whitespace-nowrap">
           Watchlist
         </button>
-        <button className="px-4 py-2 rounded-md bg-zinc-800 hover:bg-zinc-700 text-white whitespace-nowrap">
+        <button className="px-10 py-4 rounded-md bg-zinc-800 text-gray-400 hover:bg-indigo-800 hover:text-white whitespace-nowrap">
           Sold
         </button>
       </div>
@@ -52,7 +56,7 @@ export default function ProductList({ products, onAddToCart, onAddToWishlist }) 
       <div className="flex p-4 items-center border-b border-zinc-800">
         <div className="relative mr-2">
           <select 
-            className="bg-zinc-800 text-white p-2 rounded-md pr-8 appearance-none"
+            className="bg-zinc-800 text-gray-400 p-2 rounded-md pr-8 appearance-none"
             value={sortBy} 
             onChange={(e) => setSortBy(e.target.value)}
           >
@@ -82,11 +86,9 @@ export default function ProductList({ products, onAddToCart, onAddToWishlist }) 
           </div>
         </div>
 
-        <button className="bg-zinc-800 text-white p-2 rounded-md ml-2 flex items-center">
-          <svg className="h-5 w-5 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4" />
-          </svg>
-          Filter ({filter ? '43' : '0'})
+        <button className="bg-zinc-800 text-gray-400 p-2 rounded-md ml-2 flex items-center">
+        <TbHexagonLetterQ className='mr-2'/>
+          Filter(43)
         </button>
       </div>
 
