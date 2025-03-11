@@ -97,7 +97,7 @@ export default function ProductCard({ product, onAddToCart, onAddToWishlist }) {
           </div>  
           
       </div>
-      <hr className="my-4 border-t-2 border-gray-600" />
+      <hr className="my-4 border-t border-gray-800" />
     </div>
   );
   
