@@ -36,7 +36,7 @@ export default function ProductList({ products, onAddToCart, onAddToWishlist }) 
         <button className="px-10 py-4 rounded-md bg-zinc-800 text-gray-400 hover:bg-indigo-800 hover:text-white whitespace-nowrap">
           Trending
         </button>
-        <button className="px-10 py-4 rounded-md bg-indigo-600  hover:bg-indigo-800 whitespace-nowrap">
+        <button className="px-10 py-4 rounded-md text-white bg-indigo-600  hover:bg-indigo-800 whitespace-nowrap">
           Top Deals
         </button>
         <button className="px-10 py-4 rounded-md bg-zinc-800 text-gray-400 hover:bg-indigo-800 hover:text-white whitespace-nowrap">
